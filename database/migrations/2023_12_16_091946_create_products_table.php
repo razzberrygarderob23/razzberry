@@ -21,6 +21,7 @@ return new class extends Migration
             $table->float('size');
             $table->string('materials');
             $table->string('country');
+            $table->string('description');
             $table->string('color');
             $table->string('image');
             $table->boolean('active');
