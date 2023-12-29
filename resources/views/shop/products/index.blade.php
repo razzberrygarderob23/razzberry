@@ -1,23 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
-<table>
+<div class="container"> 
+    <div class="product">
     @foreach($items as $item)
-    <tr>
-        <td>{{$item->id}}</td>
-        <td>
-            <a href="{{ route('products.show', $item->id) }}">{{ $item->name }}</a>
-        </td>
-        <td>{{$item->price}}</td>
-        <td>{{$item->size}}</td>
-        <td>{{$item->materials}}</td>
-        <td>{{$item->country}}</td>
-        <td>{{$item->description}}</td>
-        <td>{{$item->color}}</td>
-        <td>{{$item->image}}</td>
-        <td>{{$item->active}}</td>
-    </tr>
+        <div class="col-md-4 col-lg-4 col-4 col-sm-6">
+            <div>
+                <img src="{{asset('uploads/' . $item->image)}}">
+            </div>
+            <div>
+                <a href="{{ route('products.show', $item->id) }}">{{ $item->name }}</a>
+            </div>
+            <div>{{$item->price}}</div>
+        </div>
     @endforeach
-</table>
+</div>
+</div>
 @endsection
 

@@ -6,3 +6,16 @@
 
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
+
+img {
+    max-width: 100%;
+}
+
+.product {
+    display:flex;
+    flex-wrap: wrap;
+    
+    img {
+        height: 500px;
+    }
+}
