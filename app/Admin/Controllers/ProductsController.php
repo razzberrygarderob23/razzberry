@@ -83,7 +83,7 @@ class ProductsController extends AdminController
         $form->text('materials', __('Materials'));
         $form->text('country', __('Country'));
         $form->text('description', __('Description'));
-        $form->color('color', __('Color'));
+        $form->text('color', __('Color'));
         $form->image('image', __('Image'));
         $form->switch('active', __('Active'));
 
